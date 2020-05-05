@@ -1,7 +1,9 @@
-html {
-  box-sizing: border-box;
+*{
   margin: 0;
   padding: 0;
+}
+html {
+  box-sizing: border-box;
 }
 *::before,
 *::after {
@@ -19,6 +21,7 @@ li {
 a {
   text-decoration: none;
   color: #fff;
+  outline: none;
 }
 .container {
   max-width: 1920px;
@@ -82,6 +85,39 @@ a {
     padding-right: 10px;
     span{
       font-weight: 100;
+    }
+  }
+}
+.btn{
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 80px;
+  text-transform: uppercase;
+  // position: relative;
+  span{
+    position: relative;
+    display: inline-block;
+    background:$green;
+    padding: 0 57px 0 17px;
+    margin-left: 19px;
+    &::before{
+      content:"";
+      width: 20px;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: -10px;
+    }
+    &::after{
+      content:"";
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      background-image: url(../img/arrows-right.svg);
+      right: 17px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
