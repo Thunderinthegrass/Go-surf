@@ -185,15 +185,17 @@
 }
 .surf {
   position: relative;
-  padding: 100px 0;
   background-image: url(../img/surf-map-aside.svg);
   background-position: right 50px;
   background-repeat: no-repeat;
   background-size: auto;
 }
-.surf__subtitle {
+.surf__subtitle,
+.travel__subtitle {
   padding-right: 80px;
   text-align: right;
+}
+.surf__subtitle{
   margin-top: -86px;
 }
 .surf-slider {
@@ -418,4 +420,89 @@
   right: 86px;
 }
 
+.travel {
+  background-image: url(../img/travel-glass.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  padding-bottom: 230px;
+  position: relative;
+  .slider-arrows{
+    position: absolute;
+    top: 220px;
+    opacity: 0.25;
+  }
+}
+.travel-slider{
+  &__head{
+  min-height: 780px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  }
+  &__descr{
+  padding: 160px 0 0 132px;
+  margin-top: -270px;
+  min-height: 320px;
+  background-repeat: no-repeat;
+  background-position: right top;
+  .descr__head{
+    padding-right: 78px;
+    position: relative;
+    img{
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+  }
+  }
+  .subtitle{
+    padding: 100px 0 0 0;
+  }
+  .travel-slider__btn{
+    text-align: center;
+  }
+}
+.travel-slider__info{
+  padding: 0 140px 0 132px;
+  display: flex;
+  justify-content: space-between;
+}
+.travel-slider__info-item{
+  min-height: 200px;
+  margin-bottom: 60px;
+  position: relative;
+  span{
+    line-height: 14px;
+    text-align: right;
+    letter-spacing: 5.25px;
+    text-transform: uppercase;
+    opacity: 0.75;
+    font-size: 14px;
+    position: absolute;
+    right: 40px;
+  }
+}
+.travel-slider__info-title{
+  font-size: 40px;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding-left: 40px;
+  width: 240px;
+}
+.travel-slider__info-subtitle{
+  line-height: 22px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  font-size: 18px;
+  position: absolute;
+  left: -95px;
+  top: 95px;
+  width: 200px;
+  height: 0;
+  white-space: nowrap;
+  text-align: right;
+}
 @import "media";
