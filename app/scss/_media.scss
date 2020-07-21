@@ -1,0 +1,155 @@
+@media (max-width: 1440px) {
+  .logo {
+    img {
+      width: 100px;
+    }
+  }
+  .menu li {
+    margin: 26px 0;
+  }
+  .header__title {
+    line-height: 115px;
+    font-size: 150px;
+    top: 20px;
+    left: 60px;
+  }
+  .header__arrows {
+    left: 140px;
+  }
+  .menu {
+    li {
+      margin-top: 15px;
+    }
+  }
+}
+@media (max-width: 1366px) {
+  .header__aside {
+    height: 109px;
+    padding-right: 25px;
+    border-right: none;
+    display: flex;
+    align-items: flex-start;
+    background: rgba(#fff, 0.1);
+  }
+  .logo {
+    img {
+      width: 100px;
+    }
+  }
+  .menu__list {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0;
+    }
+    a {
+      display: block;
+      padding: 13px 15px;
+    }
+  }
+  .header__search {
+    padding: 33px 15px 15px;
+  }
+  .header__date {
+    padding: 15px 15px;
+  }
+  .header__location {
+    margin-top: 40px;
+  }
+  .header__arrows {
+    left: 70px;
+  }
+  .slider-item__info-title {
+    font-size: 60px;
+  }
+  .header__arrows {
+    left: 30px;
+  }
+}
+@media (max-width: 1340px) {
+  .header__map {
+    svg {
+      width: 500px;
+      height: 250px;
+    }
+  }
+  .slider-arrows__right {
+    right: 40px;
+    top: 30px;
+  }
+  .slider-arrows__left {
+    right: 90px;
+    top: 30px;
+  }
+}
+@media (max-width: 1040px) {
+  .header__arrows {
+    display: none;
+  }
+  .menu {
+    background: $green;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transform: translate(-100%);
+    transition: all .5s;
+    &.active{
+      transform: translate(0%);
+    }
+  }
+  .menu-btn{
+    display: block;
+  }
+  .header__search {
+    padding: 40px 15px 15px;
+  }
+  .slider-item__info {
+    right: 25px;
+    bottom: 20px;
+  }
+  .slider-item__info-title {
+    font-size: 55px;
+    line-height: 55px;
+    margin-bottom: 20px;
+  }
+  .slider-item__info-text {
+    font-size: 35px;
+    line-height: 36px;
+    margin-bottom: 11px;
+  }
+  .headline-left {
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 7.33333px;
+    padding-left: 80px;
+  }
+  .headline-left::before {
+    width: 65px;
+  }
+  .slider-dotshead {
+    right: 0;
+    left: 10px;
+    margin: 0 auto;
+    bottom: 5px;
+  }
+  .dots-box {
+    width: 125px;
+  }
+  .dots-box__number {
+    font-size: 18px;
+  }
+  .dots-box__name {
+    line-height: 18px;
+  }
+}
+@media (max-width: 720px) {
+  .slider-item__info-title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+
+}

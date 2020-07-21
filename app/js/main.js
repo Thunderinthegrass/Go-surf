@@ -71,7 +71,7 @@ $(function () {
   let quantityButton = document.querySelectorAll('.quantity-button');
 
   
-  summ.innerHTML = (nights.value * 55) + ((guests.value - 1) * 25);
+  // summ.innerHTML = (nights.value * 55) + ((guests.value - 1) * 25);
 
   for(let i = 0; i < quantityButton.length; i++){
     quantityButton[i].onclick = function(){
@@ -83,4 +83,13 @@ $(function () {
   $('.surfboard-box__circle').on('click', function(){
     $(this).toggleClass('active')
   });
+
+
+  let menuBtn = document.querySelector('.menu-btn');
+  let activeMenu = document.querySelector('.menu');
+  
+
+  menuBtn.onclick = function(){
+    activeMenu.classList.toggle('active');
+  }
 });
