@@ -10,20 +10,82 @@ $(function () {
     asNavFor: '.header__slider',
     slidesToShow: 4,
     slidesToScroll: 1,
-  })
+    responsive: [{
+      breakpoint: 961,
+      settings: {
+        settings: "unslick"
+      }
+    }]
+  });
   $('.surf-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: '<img class="slider-arrows slider-arrows__left"src="img/arrows-left.svg" alt="">',
     nextArrow: '<img class="slider-arrows slider-arrows__right"src="img/arrows-right.svg" alt="">',
-    asNavFor: '.slider-map'
+    asNavFor: '.slider-map',
+    responsive: [{
+      breakpoint: 1165,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },{
+      breakpoint: 930,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },{
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+      }
+    },{
+      breakpoint: 460,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+      }
+    }]
   });
   $('.slider-map').slick({
     asNavFor: '.surf-slider',
     slidesToShow: 8,
     slidesToScroll: 1,
-    focusOnSelect: true
-  })
+    arrows: false,
+    focusOnSelect: true,
+    responsive: [{
+      breakpoint: 1104,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },{
+      breakpoint: 930,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode: true,
+      }
+    },{
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+      }
+    },{
+      breakpoint: 460,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+      }
+    }]
+  });
   $('.holder__slider, .shop__slider').slick({
     infinite: true,
     fade: true,
@@ -79,7 +141,7 @@ $(function () {
     };
   } 
   
-
+// 
   $('.surfboard-box__circle').on('click', function(){
     $(this).toggleClass('active')
   });

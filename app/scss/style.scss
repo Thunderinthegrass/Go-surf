@@ -124,7 +124,7 @@
   display: none;
   width: 40px;
   position: absolute;
-  right: 20px;
+  right: 25px;
   top: 70px;
   z-index: 1;
   &__line{
@@ -237,9 +237,11 @@
   }
 }
 .surf-box {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  &__wrapper{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   &__inner {
     min-height: 750px;
     background: rgba(#1c2121, 0.6);
@@ -304,9 +306,26 @@
   .slick-current {
     .slider-dots__content {
       display: block;
+      border: 1px solid rgba(#fff, .3);
+      }
+      .slider-dots__circle{
+        &::before {
+          display: block;
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 0;
+          border-bottom: 20px solid $green;
+          border-left: 12.5px solid transparent;
+          border-right: 12.5px solid transparent;
+          left: -1px;
+          top: -11px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+      }
     }
   }
-}
 .slider-dots__circle {
   display: inline-block;
   height: 23px;
@@ -314,17 +333,9 @@
   background: $green;
   border-radius: 50%;
   box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
-}
-.slider-dots__content {
-  position: absolute;
-  bottom: 48px;
-  transform: translateX(-172.5px);
-  display: none;
-  width: 283px;
-  padding: 28px 31px 0;
-  background: rgba(#0f1010, 0.7);
-  border-radius: 6px;
+  z-index: 1;
   &::before {
+    display: none;
     position: absolute;
     content: "";
     width: 0;
@@ -337,6 +348,16 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+}
+.slider-dots__content {
+  position: absolute;
+  bottom: 48px;
+  transform: translateX(-172.5px);
+  display: none;
+  width: 283px;
+  padding: 28px 31px 0;
+  background: rgba(#0f1010, 0.7);
+  border-radius: 6px;
 }
 .slider-dots__content-row {
   display: flex;
@@ -395,8 +416,11 @@
 }
 .slider-dots--1 {
   position: absolute;
-  left: -12px;
+  left: -1%;
   top: 330px;
+  .slider-dots__content{
+    transform: translateX(0);
+  }
 }
 .slider-dots--2 {
   position: absolute;
@@ -432,6 +456,9 @@
   position: absolute;
   top: 492px;
   right: 86px;
+  .slider-dots__content{
+    transform: translateX(-93%)
+  }
 }
 
 .holder {
