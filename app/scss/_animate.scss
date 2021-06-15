@@ -1,0 +1,385 @@
+// reeds---------------------------------------------------------
+.reeds {
+  height: 80px;
+  .cls-1 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 1.5px;
+  }
+  .cls-2 {
+    fill: #fff;
+  }
+  .water-lily {
+    fill: #6e953a;
+  }
+}
+.reeds-link {
+  position: relative;
+}
+.gnat-wrap,
+.gnat1-wrap,
+.gnat2-wrap {
+  position: absolute;
+  left: 80px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.gnat-wrap {
+  animation: gnat-wrap 1s infinite linear;
+  // background: #5555ff;
+}
+.gnat1-wrap {
+  animation: gnat1-wrap 1s infinite linear;
+  // background: #55ff55;
+}
+.gnat2-wrap {
+  animation: gnat2-wrap 0.8s infinite linear;
+  // background: #ff5555;
+}
+
+.reeds-link:hover {
+  .gnat-wrap,
+  .gnat1-wrap,
+  .gnat2-wrap {
+    background: rgba(233, 210, 7, 0.25);
+    box-shadow: 0 0 0.2px 0.15px rgba(233, 210, 7, 0.5), 0 0 1px 5px rgba(233, 210, 7, 0.3);
+  }
+}
+
+@keyframes gnat-wrap {
+  from {
+    transform: rotate(0deg) translateX(15px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(14px) rotate(-180deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(15px) rotate(-360deg);
+  }
+}
+@keyframes gnat1-wrap {
+  from {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg) translateX(8px) rotate(180deg);
+  }
+  to {
+    transform: rotate(-360deg) translateX(10px) rotate(360deg);
+  }
+}
+@keyframes gnat2-wrap {
+  0% {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(14px) rotate(-180deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg);
+  }
+}
+.gnat,
+.gnat1,
+.gnat2 {
+  .cls-1 {
+    fill: #fff;
+  }
+}
+.gnat {
+  animation: gnat 5s linear infinite;
+}
+@keyframes gnat {
+  0% {
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.gnat1 {
+  width: 6px;
+  animation: gnat1 5s linear infinite;
+}
+@keyframes gnat1 {
+  0% {
+  }
+  50% {
+    transform: rotate(500deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.gnat2 {
+  animation: gnat2 5s linear infinite;
+}
+@keyframes gnat2 {
+  0% {
+  }
+  50% {
+    transform: rotate(400deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+//end-reeds
+// route-icon-----------------------------------------------------------------
+.route-icon__link {
+  position: relative;
+}
+.route-icon__link:hover {
+  .corbie-eye {
+    // box-shadow: 0 0 5px #00ff9d;
+    // box-shadow: 0 0 5px #00fff2;-топовый цвет
+    // box-shadow: 0 0 10px 5px #00e1ff;-тоже
+    box-shadow: 0 0 10px 5px #ff012b;
+  }
+}
+.route-icon {
+  height: 80px;
+  .cls-1 {
+    fill: none;
+  }
+
+  .cls-1,
+  .cls-2 {
+    stroke: #fff;
+    stroke-width: 1.5px;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-3 {
+    fill: #ef0c0c;
+  }
+  .corbie {
+    fill: #000;
+    stroke-width: 0.4px;
+  }
+}
+.corbie-eye {
+  position: absolute;
+  background: rgb(255, 0, 0);
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  left: 38px;
+  top: 3px;
+  transition: 0.5s;
+}
+.letters {
+  stroke: #fff;
+  fill: none;
+  stroke-width: 1px;
+  animation: letters 5s linear 1s infinite;
+  stroke-dashoffset: 30;
+  stroke-dasharray: 30;
+}
+@keyframes letters {
+  0% {
+  }
+  30% {
+    stroke-dashoffset: 30;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+// route-icon-end--------------------------------------------
+
+// hut-icon--------------------------------------------------
+.hut-icon {
+  height: 80px;
+  stroke-width: 2px;
+  .window {
+    fill: #dd121200;
+  }
+  .cls-1 {
+    fill: transparent;
+    transition: 0.5s;
+  }
+  .cls-1,
+  .cls-2,
+  .cls-3 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+  }
+  .cls-3 {
+    fill: #fff;
+  }
+  &:hover {
+    .window {
+      fill: #cfa226;
+    }
+  }
+}
+.smoke-bottom {
+  fill: rgba(255, 255, 255, 0);
+  animation: smoke-bottom 5s infinite 1s;
+}
+@keyframes smoke-bottom {
+  0% {
+    fill: rgba(#7e93f1, 1);
+  }
+  70% {
+    fill: rgba(#7e93f1, 1);
+  }
+  100% {
+    fill: rgbaa(#7e93f1, 0);
+  }
+}
+.smoke-middle {
+  fill: rgba(255, 255, 255, 0);
+  animation: smoke-middle 5s infinite 2s;
+}
+@keyframes smoke-middle {
+  0% {
+    fill: rgba(#7e93f1, 1);
+  }
+  70% {
+    fill: rgba(#7e93f1, 1);
+  }
+  100% {
+    fill: rgba(#7e93f1, 0);
+  }
+}
+.smoke-top {
+  fill: rgba(#7e93f1, 0);
+  animation: smoke-top 5s infinite 3s;
+}
+@keyframes smoke-top {
+  0% {
+    fill: rgba(#7e93f1, 1);
+  }
+  70% {
+    fill: rgba(#7e93f1, 1);
+  }
+  100% {
+    fill: rgba(255, 255, 255, 0);
+  }
+}
+// hut-icon-end--------------------------------------------------
+// guides-icons--------------------------------------------------
+.peace-guide-icon {
+  height: 80px;
+  .cls-1,
+  .cls-3 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-1 {
+    stroke-width: 2px;
+  }
+
+  .cls-2 {
+    fill: #fff;
+  }
+
+  .cls-3 {
+    stroke-width: 1px;
+  }
+}
+.smoke {
+  stroke-dashoffset: 150;
+  stroke-dasharray: 150;
+  animation: smoke 6s linear 1.5s infinite;
+}
+@keyframes smoke {
+  0% {
+  }
+  10% {
+    stroke-dashoffset: 150;
+  }
+  60% {
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 0.01;
+  }
+}
+.guide-shoot {
+  height: 80px;
+  display: none;
+  .cls-1,
+  .cls-2 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-1 {
+    stroke-width: 2px;
+  }
+}
+.guide-link {
+  position: relative;
+}
+.coal {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  background: rgb(238, 6, 6);
+  border-radius: 50%;
+  right: 43px;
+  top: 18px;
+  animation: coal 6s linear 1.5s infinite;
+}
+@keyframes coal {
+  0% {
+    box-shadow: 0 0 0px 0px rgb(206, 12, 12);
+  }
+  8% {
+    box-shadow: 0 0 10px 5px rgb(206, 12, 12);
+  }
+  10% {
+    box-shadow: 0 0 0px 0px rgb(206, 12, 12);
+  }
+}
+.guide-link:hover {
+  .guide-shoot {
+    display: inline-block;
+  }
+  .peace-guide-icon {
+    display: none;
+  }
+  .coal {
+    width: 4px;
+    height: 4px;
+    top: 17px;
+    right: 11px;
+    animation: shoot 1.5s linear infinite;
+  }
+  @keyframes shoot {
+    0% {
+      background: transparent;
+      box-shadow: 0 0 0px 0px rgb(206, 12, 12);
+    }
+    5% {
+      background: transparent;
+      box-shadow: 0 0 0px 0px rgb(206, 12, 12);
+    }
+    15% {
+      background: rgb(238, 6, 6);
+      box-shadow: 0 0 10px 5px rgb(228, 60, 9);
+    }
+    23% {
+      background: transparent;
+      box-shadow: 0 0 0px 0px rgb(206, 12, 12);
+    }
+    100% {
+      background: transparent;
+      box-shadow: 0 0 0px 0px rgb(206, 12, 12);
+    }
+  }
+}
+// guides-icons-end----------------------------------------------

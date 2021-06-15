@@ -17,7 +17,7 @@ $(function () {
       }
     }]
   });
-  $('.surf-slider').slick({
+  $('.swamp-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: '<img class="slider-arrows slider-arrows__left"src="img/arrows-left.svg" alt="">',
@@ -52,7 +52,7 @@ $(function () {
     }]
   });
   $('.slider-map').slick({
-    asNavFor: '.surf-slider',
+    asNavFor: '.swamp-slider',
     slidesToShow: 8,
     slidesToScroll: 1,
     arrows: false,
@@ -142,7 +142,7 @@ $(function () {
   } 
   
 // 
-  $('.surfboard-box__circle').on('click', function(){
+  $('.swampboard-box__circle').on('click', function(){
     $(this).toggleClass('active')
   });
 
@@ -155,3 +155,42 @@ $(function () {
     activeMenu.classList.toggle('active');
   }
 });
+
+//clock--------------------------------------------------------------------
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
+
+setInterval(()=>{
+let day = new Date();
+let hh = day.getHours() * 30;
+let mm = day.getMinutes() * 6;
+let ss = day.getSeconds() * 6;
+
+hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+mn.style.transform = `rotateZ(${mm}deg)`;
+sc.style.transform = `rotateZ(${ss}deg)`;
+
+let digitHour = document.querySelector('.digit-hour');
+let digitMinutes = document.querySelector('.digit-minutes');
+let digitSeconds = document.querySelector('.digit-seconds');
+
+let h = new Date().getHours();
+let m = new Date().getMinutes();
+let s = new Date().getSeconds();
+
+digitHour.innerHTML = h+':';
+digitMinutes.innerHTML = m+':';
+digitSeconds.innerHTML = s;
+
+if(h < 10){
+  digitHour.innerHTML = "0"+h+':';
+}
+if(m < 10){
+  digitMinutes.innerHTML = "0"+m+':';
+}
+if(s < 10){
+  digitSeconds.innerHTML = "0"+s;
+}
+})
+//end-clock----------------------------------------------------------------
